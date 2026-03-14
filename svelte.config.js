@@ -4,10 +4,10 @@ import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
-    // Move mdsvex to the front of the array
+    extensions: ['.svelte', '.md', '.svx'],
     preprocess: [
         mdsvex({
-            extensions: ['.md', '.svx'], // Tell mdsvex which files to touch
+            extensions: ['.md', '.svx'],
         }),
         vitePreprocess()
     ],
@@ -16,14 +16,17 @@ const config = {
         adapter: adapter({
             pages: 'build',
             assets: 'build',
-            fallback: undefined,
+            // CHANGE: Set a fallback page. 
+            // 404.html is the standard for Vercel/GitHub Pages static hosting.
+            fallback: '404.html', 
             precompress: false,
             strict: true
-        })
-    },
-
-    // Ensure Svelte looks for .md files too
-    extensions: ['.svelte', '.md', '.svx']
+        }),
+        // Ensure your slug pages are handled
+        alias: {
+            $content: 'src/content'
+        }
+    }
 };
 
 export default config;
