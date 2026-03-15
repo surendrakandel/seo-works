@@ -12,7 +12,7 @@ function generateDiscoveryManifest() {
         name: 'generate-discovery-manifest',
         closeBundle() {
             const contentDir = path.resolve('src/content');
-            const outputDir = path.resolve('../informer/src', 'urls');
+            const outputDir = path.resolve('../informer/src', 'data');
             const outputFile = path.join(outputDir, 'manifest.json');
 
             if (!fs.existsSync(contentDir)) return;
