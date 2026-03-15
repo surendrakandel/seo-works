@@ -13,8 +13,3 @@
     </nav>
   </div>
 </footer>
-<div class="footer footer-center p-4 bg-neutral text-neutral-content border-t border-base-100/10">
-  <aside>
-    <p>Copyright © 2026 - DriveReady.co Inspection Platform</p>
-  </aside>
-</div>
