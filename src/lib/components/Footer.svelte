@@ -7,9 +7,9 @@
     </nav> 
     <nav class="flex flex-col min-w-75">
       <h6 class="footer-title">Legal</h6> 
-      <a href="./terms-of-use" class="link link-hover">Terms of use</a>
-      <a href="./privacy" class="link link-hover">Privacy policy</a>
-      <a href="./cookie" class="link link-hover">Cookie policy</a>
+      <a href="/terms-of-use" class="link link-hover">Terms of use</a>
+      <a href="/privacy" class="link link-hover">Privacy policy</a>
+      <a href="/cookie" class="link link-hover">Cookie policy</a>
     </nav>
   </div>
 </footer>
